@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 import time
 import xml.etree.ElementTree as ET
@@ -23,6 +25,9 @@ def main(deckfile, dbfile):
     print(output)
  
 if __name__ == "__main__":
-    main(sys.argv[1], sys.argv[2])
+    try:
+        main(sys.argv[1], sys.argv[2])
+    except:
+        print("Incorrect usage, please input the correct dekfile and dbfile arguments")
 
 
